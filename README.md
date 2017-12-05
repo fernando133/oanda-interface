@@ -12,7 +12,7 @@ Should create the script_conf.json in the ```/conf``` folder with the ```API Key
 {
     "script-conf":{
         "oanda":{
-            "secret"       : "API_KEY", 
+            "api_key"       : "API_KEY", 
             "account_id"   : "ACCOUNT_ID",
          }
     }
