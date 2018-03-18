@@ -22,6 +22,8 @@ instrument_helper = InstrumentHelper()
 while True:
 	data = instrument_helper.get_info(instrument)
 	print data['prices'][0]
-	data_id = collection.insert_one(data['prices'][0]).inserted_id
-	print data_id
+	if data['prices'][0]['status'] != 'halted':
+		data_id = collection.insert_one(data['prices'][0]).inserted_id
+		print data_id
+	
 	time.sleep(float(period))
